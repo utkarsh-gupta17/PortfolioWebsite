@@ -1,15 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
-import BUZZUPBG from '../../assets/Buzzup.jpg'
+// import BUZZUPBG from '../../../public/todo.png'
 import Button from '../common/Button'
-import { TransitionLink } from '../../contexts/PageLoaderContext';
+// import { TransitionLink } from '../../contexts/PageLoaderContext';
 import { Canvas } from '@react-three/fiber';
+import Xcrypto from '../../assets/xcrypto.mp4';
 import Bee from '../models/Bee';
 
 export default function FeaturedSection()
 {
     const [phaseIndex,setPhaseIndex] = useState(0);
     const ref = useRef<HTMLDivElement>(null)
-    const phases = ['GAEM','BUZZUP',"CHROMA"];
+    const phases = ['SynthAi','nextToDo',"Xcrypt"];
 
     useEffect(()=>{
         deltaPhase(0);
@@ -73,10 +74,10 @@ export default function FeaturedSection()
                 {
                     phases.map((value,index)=>
                     {
-                        if(phaseIndex == 1)
-                        {
-                            return <div onClick={()=>{setPhase(index);resetTimer()}} className={`cursor-pointer w-3 h-3 rounded-full transition-colors duration-700 ${(index==phaseIndex)?"bg-[#faa214]":"bg-[#faa214]/50"}`} key={value}></div>
-                        }
+                        // if(phaseIndex == 0)
+                        // {
+                        //     return <div onClick={()=>{setPhase(index);resetTimer()}} className={`cursor-pointer w-3 h-3 rounded-full transition-colors duration-700 ${(index==phaseIndex)?"bg-[#000000]":"bg-[#ff3030]/50"}`} key={value}></div>
+                        // }
                         return(
                             <div onClick={()=>{setPhase(index);resetTimer()}} className={`cursor-pointer w-3 h-3 rounded-full transition-colors duration-700 ${(index==phaseIndex)?"bg-primary":"bg-primary/50"}`} key={value}></div>
                         )
@@ -84,43 +85,50 @@ export default function FeaturedSection()
                 }
             </div>
             <div className="absolute top-0 left-0 h-full w-full overflow-clip z-10">
-            <div style={{translate:`-${(phaseIndex)}00vw 0`}} className="w-[300vw] h-full flex transition-all duration-500">
-                <div className="w-[100vw] h-full relative flex flex-col justify-center items-center">
-                    <div className="absolute top-0 left-0 h-3/4 w-full bg-gradient-to-b from-background to-transparent -z-10"/>
-                    <video src={"https://github.com/AlphaCupcake10/PortfolioRevamped/raw/main/src/assets/Gaem.mp4"} className="absolute top-0 left-0 -z-20 w-full h-full object-cover" autoPlay muted loop/>
-                    <h1 className='text-5xl lg:text-8xl font-bold tracking-tighter text-center'>ABYSSAL DESCENT</h1>
-                    <h1 className='text-4xl lg:text-6xl font-bold opacity-70 tracking-tighter'>RUNS ON WEBGL</h1>
-                    <TransitionLink to={'/game'}>
-                        <Button color='primary' className='mt-8 w-48'>PLAYTEST NOW</Button>
-                    </TransitionLink>
-                </div>
-                <div className="w-[100vw] h-full relative flex flex-col md:flex-row sm:justify-center items-center p-4 lg:px-32 xl:px-64">
-                    {/* <ModelCanvas className=''/> */}
-                    <div className='w-full h-96' ref={ref}>
-                        <Canvas camera={{fov:35,position:[0,0,6]}}>
-                            <Bee CanvasRef={ref}/>
-                        </Canvas>
+                <div style={{translate:`-${(phaseIndex)}00vw 0`}} className="w-[300vw] h-full flex transition-all duration-500">
+                    <div className="w-[100vw] h-full relative flex flex-col justify-center items-center">
+                        <div className="absolute top-0 left-0 h-3/4 w-full bg-gradient-to-b from-background to-transparent -z-10"/>
+                        <img src="/Synthai.png" className="absolute top-0 left-0 -z-20 w-full h-full object-cover"/>
+                        <div className='bg-white/50 bg-opacity-20 backdrop-blur-lg rounded-lg drop-shadow-lg flex flex-col items-center justify-center p-10'>
+                            <h1 className='text-5xl lg:text-8xl font-bold tracking-tighter text-center accent-gradient background-clip-text'>SynthAi</h1>
+                            <h1 className='text-4xl lg:text-6xl font-bold opacity-70 tracking-tighter py-2 text-center'>SaaS AI Platform.</h1>
+                            <a href="https://synth-aii.vercel.app/" target='_blank'>
+                                <Button color='primary' className='mt-8 w-48'>Checkout SynthAi</Button>
+                            </a>
+                        </div>
                     </div>
-                    <img src={BUZZUPBG} className="absolute top-0 left-0 -z-20 w-full h-full object-cover"/>
-                    <div className="w-full flex flex-col justify-center">
-                        <h1 className='animate left font-black text-6xl md:text-9xl leading-tight'>BUZZUP<span className='accent-gradient background-clip-text'>.</span></h1>
-                        <h1 className='animate left delay-1 font-extrabold text-2xl md:text-5xl leading-tight'>It's an <span className='accent-gradient background-clip-text'>Audio Thing.</span></h1>
-                        <p className='animate left delay-2 font-light opacity-70 text-sm md:text-base mt-2'>Combine images and audio for a vibrant, new social experience!</p>
-                        <div className="flex gap-4 mt-4">
-                            <a href='https://buzzup-phi.vercel.app/' target='_blank' className='bg-[#faa214] w-64 rounded-xl px-4 py-2.5 md:py-4 md:px-6 hover:scale-105 transition-transform active:scale-95 text-xs md:text-base grid place-content-center'>VISIT</a>
+                    <div className="w-[100vw] h-full relative flex flex-col md:flex-row sm:justify-center items-center p-4 lg:px-32 xl:px-64">
+                        {/* <ModelCanvas className=''/> */}
+                        <div className='h-40 md:w-full md:h-96' ref={ref}>
+                            {/* <Canvas camera={{fov:35,position:[0,0,6]}}> */}
+                                {/* <Bee CanvasRef={ref}/> */}
+                            {/* </Canvas> */}
+                        </div> 
+                        <video src={Xcrypto} className="absolute top-0 left-0 -z-20 w-full h-full object-cover" autoPlay muted loop/>
+                        <div className='bg-white bg-opacity-20 backdrop-blur-lg rounded-lg drop-shadow-lg p-10'>
+                            <div className="w-full flex flex-col justify-center items-center">
+                                {/* accent-gradient background-clip-text */}
+                                <h1 className='animate left font-black text-6xl md:text-9xl leading-tight accent-gradient background-clip-text'>Xcrypto.</h1>
+                                <h1 className='animate left delay-1 font-extrabold text-2xl md:text-5xl leading-tight mt-4'>For All <span className='mt-4'>Crypto needs.</span></h1>
+                                <p className='animate left delay-2 font-light opacity-70 text-sm md:text-base mt-2'>A crypto app made using react which shows all exchanges and coins using coingecko API</p>
+                                <div className="flex gap-4 mt-4">
+                                    <a href='https://utxcryptoapp.netlify.app/' target='_blank' className='bg-primary w-64 rounded-xl px-4 py-2.5 md:py-4 md:px-6 hover:scale-105 transition-transform active:scale-95 text-xs md:text-base grid place-content-center'>Visit Xcrypto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="w-[100vw] h-full relative flex flex-col justify-center items-center">
+                        <div className="absolute top-0 left-0 h-3/4 w-full bg-gradient-to-b from-background to-transparent -z-10"/>
+                        <img src="/todo.png" className="absolute top-0 left-0 -z-20 w-full h-full object-cover"/>
+                        <div className='bg-white/50 bg-opacity-20 backdrop-blur-lg rounded-lg drop-shadow-lg flex flex-col items-center justify-center p-12'>
+                            <h1 className='text-5xl lg:text-8xl font-bold tracking-tighter text-center accent-gradient background-clip-text'>nextToDo</h1>
+                            <h1 className='text-2xl lg:text-5xl font-bold opacity-70 tracking-tighter'>Get Stuff Done.</h1>
+                            <a target='_blank' href="https://nexttodooo.vercel.app/">
+                                <Button color='primary' className='mt-8 w-48'>Visit nextTodo</Button>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div className="w-[100vw] h-full relative flex flex-col justify-center items-center">
-                    <div className="absolute top-0 left-0 h-3/4 w-full bg-gradient-to-b from-background to-transparent -z-10"/>
-                    <video src={"https://github.com/AlphaCupcake10/PortfolioRevamped/raw/main/src/assets/Banner.mp4"} className="absolute top-0 left-0 -z-20 w-full h-full object-cover" autoPlay muted loop/>
-                    <h1 className='text-5xl lg:text-8xl font-bold tracking-tighter text-center'>QUANTUM THRUST</h1>
-                    <h1 className='text-2xl lg:text-5xl font-bold opacity-70 tracking-tighter'>A BLENDER ANIMATION</h1>
-                    <a target='_blank' href="https://youtu.be/91xYJy3Mzm4?si=r9pUXB2j3fMVU1Nq">
-                        <Button color='primary' className='mt-8 w-48'>WATCH</Button>
-                    </a>
-                </div>
-            </div>
             </div>
         </section>
     </>

@@ -1,7 +1,7 @@
 import { useRef, useEffect, ReactNode } from "react";
 import BG from "../../assets/BG.jpg?url";
-import BGFront from "../../assets/Front.png?url";
-import BGFront2 from "../../assets/Front2.png?url";
+// import BGFront from "../../assets/Front.png?url";
+// import BGFront2 from "../../assets/Front2.png?url";
 import Wallpaper1 from "../../assets/wallpaper1.jpg?url";
 import Wallpaper2 from "../../assets/wallpaper2.jpg?url";
 import { gsap } from "gsap";
@@ -20,7 +20,7 @@ export default function ParallaxBG(props:{children:ReactNode})
     const mainDiv = useRef<HTMLDivElement>(null);
     
     useEffect(() => {        
-        let ctx = gsap.context(() => {
+        const ctx = gsap.context(() => {
             
 
             gsap.to(
@@ -116,11 +116,11 @@ export default function ParallaxBG(props:{children:ReactNode})
                     </div>
                     <div ref={centerDiv} className='relative flex h-screen w-screen flex-col justify-center items-center overflow-clip border-2 border-white/20 rounded-b-2xl'>
                         <img className='absolute top-0 w-full h-full object-cover' src={BG} alt="" />
-                        <img ref={BGFront2Ref} className='hidden md:block absolute top-0 w-full h-full object-cover' src={BGFront2} alt="" />
+                        {/* <img ref={BGFront2Ref} className='hidden md:block absolute top-0 w-full h-full object-cover' src={BGFront2} alt="" />
                         <div className='hidden md:block absolute top-0 w-full h-full' ref={BGFrontRef}>
                             <img className='w-full h-full object-cover' src={BGFront} alt="" />
                             <div className="h-96 bg-background"></div>
-                        </div>
+                        </div> */}
                         <div className="h-screen w-full bg-background/50 pointer-events-none absolute top-0 left-0"></div>
                         <div className='' ref={headingRef}>
                             {props.children}
