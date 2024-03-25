@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router"
 import HomePage from "./pages/HomePage"
 import ContactPage from "./pages/ContactPage"
+// @ts-ignore
 import About from "./pages/About"
 import ProjectsPage from "./pages/ProjectsPage"
 import Page404 from "./pages/Page404"
