@@ -20,7 +20,7 @@ function HomePage()
 
     useEffect(() => {
         
-        let ctx = gsap.context(() => {
+        const ctx = gsap.context(() => {
             
             heroTextRef.forEach((ref,index)=>{
                 if(!ref.current)return;
@@ -50,7 +50,7 @@ function HomePage()
         <ParallaxBG>
             <div className='flex flex-col justify-center items-center'>
                 <div ref={heroTextRef[2]} className='overflow-y-clip'><h1 className='text-xl md:text-4xl opacity-75'>Hey, I am</h1></div>
-                <div ref={heroTextRef[1]} className='overflow-y-clip'><h1 className='text-3xl md:text-7xl font-extrabold uppercase'><AnimatedText delay={200} text='AlphaCupcake10'/></h1></div>
+                <div ref={heroTextRef[1]} className='overflow-y-clip'><h1 className='text-3xl md:text-7xl font-extrabold'><AnimatedText delay={200} text='UtkarshGupta'/></h1></div>
                 
                 <div ref={heroTextRef[0]} className='bg-red flex gap-5 mt-4'>
                     {/* <Button onClick={()=>{
@@ -61,9 +61,9 @@ function HomePage()
                         });
                     }} color='primary' className='md:w-48'>ABOUT ME</Button> */}
 
-                    <TransitionLink to='/3D'>
-                        <Button color='primary' className='md:w-48'>EXPLORE IN 3D</Button>
-                    </TransitionLink>
+                    <a href='https://drive.google.com/drive/u/1/folders/1NbVYxVtpDthB_DWbHj9HfxA6o9hoJgXW' target='_blank'>
+                        <Button color='primary' className='md:w-48'>RESUME</Button>
+                    </a>
                     <TransitionLink to='/projects'>
                         <Button color='secondary' className='md:w-48'>PROJECTS</Button>
                     </TransitionLink>
