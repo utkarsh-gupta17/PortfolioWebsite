@@ -15,6 +15,17 @@ potential for significant impact on waste management efficiency.</div>
             </>,
             link: "https://drive.google.com/file/d/1-lm8y-iTrDHh8OMG_cu4M3UAttfKLcuQ/view"
         },
+        {
+            title: "ML Trainee",
+            hoverTitle: "Amazon ML Summer School",
+            type: "STUDENT",
+            subTitle: <>
+                <h1 className="font-bold">SEP 2023 - OCT 2023</h1>
+                <div className="mt-4">Selected as one of the top 3,000 students nationwide, took part in an integrated learning program for students on key Machine Learning (ML)
+topics.<br className="mt-4"/>Contributed to the program's academic rigor by delving into diverse areas of Machine Learning, demonstrating a comprehensive understanding.</div>
+            </>,
+            link: "https://drive.google.com/file/d/1bzq8F2rH7eqLhJQex6qMkBfdEbB1JtiB/view"
+        },
     ]
     const compRefs = [useRef<HTMLAnchorElement>(null),useRef<HTMLAnchorElement>(null),useRef<HTMLAnchorElement>(null)]
     useEffect(()=>{
