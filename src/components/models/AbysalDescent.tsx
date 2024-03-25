@@ -17,14 +17,14 @@ function AbysalDescent(props:{scrollRef:RefObject<HTMLDivElement>}) {
     const CameraClips = ["CameraPivotAction","PointAction.004","PointAction.005"]
 
     function getScrollPercent() {
-        var scrollTop = window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-        var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-        var bodyHeight = Math.max(
+        const scrollTop = window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        const bodyHeight = Math.max(
             document.body.scrollHeight, document.documentElement.scrollHeight,
             document.body.offsetHeight, document.documentElement.offsetHeight,
             document.body.clientHeight, document.documentElement.clientHeight
         );
-        var scrollPercent = (scrollTop / (bodyHeight - windowHeight));
+        const scrollPercent = (scrollTop / (bodyHeight - windowHeight));
         return scrollPercent;
     }
 

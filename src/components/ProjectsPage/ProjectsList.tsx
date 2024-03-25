@@ -138,7 +138,7 @@ function Comp(props:{val:{
 {
     const compRef = useRef<HTMLAnchorElement>(null);
     useEffect(()=>{
-        let ctx = gsap.context(() => {
+        const ctx = gsap.context(() => {
             gsap.from(
                 compRef.current,{
                     yPercent:100,

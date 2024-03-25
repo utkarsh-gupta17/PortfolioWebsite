@@ -182,7 +182,7 @@ export default function AboutMe(props:{sectionRef:React.RefObject<HTMLDivElement
                     </p>
                 </div>
                 {/*  MY Image here */}
-                <div className="w-full md:w-1/2 overflow-y-clip hidden lg:block relative">
+                <div className="w-full overflow-y-clip hidden lg:block relative">
                     <div className="group" ref={imageRef}>
                         <img className={`absolute top-0 left-0 z-10 w-full h-full duration-700 ${isIntersecting?"opacity-0":""}`} src={ME} alt="" />
                         <img className='w-full h-full white-outline' src={ME1} alt="" />
