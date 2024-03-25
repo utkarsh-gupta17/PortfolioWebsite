@@ -143,7 +143,7 @@ export default function AboutMe(props:{sectionRef:React.RefObject<HTMLDivElement
     return (
         <div ref={props.sectionRef} className="relative">
             <ScrollIndicator>
-                <h1 className="text-xs opacity-50">Heyy Vsauce</h1>
+                <h1 className="text-xs opacity-50">Explore More</h1>
             </ScrollIndicator>
             <div className='overflow-x-clip 2xl:-mb-[24rem] xl:-mb-[15rem] lg:-mb-[4rem] hidden lg:block'>
                 <div ref={parentRef} className='w-max'>
@@ -167,7 +167,7 @@ export default function AboutMe(props:{sectionRef:React.RefObject<HTMLDivElement
             <div className="md:container md:mx-auto flex flex-row items-end gap-8 px-8">
                 <div className='w-full lg:w-3/4'>
                     <div className="overflow-y-clip">
-                        <h1 ref={MeRef[0]} className='text-xl sm:text-5xl font-extrabold mt-1'>UTKARSH <span className='gradient-text'>GUPTA</span></h1>
+                        <h1 ref={MeRef[0]} className='text-xl sm:text-5xl font-extrabold mt-1'>UTKARSH <span className='text-primary'>GUPTA</span></h1>
                     </div>
                     <hr className='border-primary border-2 mt-4'/>
                     <div className="mt-4 flex flex-wrap gap-1">

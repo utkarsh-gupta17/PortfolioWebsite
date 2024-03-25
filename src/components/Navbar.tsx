@@ -41,7 +41,9 @@ function Navbar(props: { className?: string, margin?: boolean }) {
   return (
     <>
       {props.margin && <div className="md:h-28"></div>}
-      <header className={`hidden md:block fixed top-0 lg:top-0 left-0 w-full z-30 ${hasScrolledUp ? "" : "-translate-y-full"} ${isOnTop ? "border-text/0" : "bg-background/50 backdrop-blur-md p-4 border-text/10"} border-b-2 duration-300 px-24`}>
+      
+      {/* bg-background/50 backdrop-blur-md p-4 border-text/10 */}
+      <header className={`hidden bg-white/20 bg-opacity-20 backdrop-blur-lg rounded-lg drop-shadow-lg md:block fixed top-0 lg:top-0 left-0 w-full z-30 ${hasScrolledUp ? "" : "-translate-y-full"} ${isOnTop ? "border-text/0" : "bg-white/50 bg-opacity-20 backdrop-blur-lg rounded-lg drop-shadow-lg"} border-b-2 duration-300 px-24`}>
         <div className={`container mx-auto flex justify-between items-center ${isOnTop ? "p-4 lg:p-8" : ""}`}>
           <div className='w-full flex justify-evenly'>
             <TransitionLink to='/'>
@@ -75,7 +77,7 @@ function Navbar(props: { className?: string, margin?: boolean }) {
             </svg>
           </TextButton>
         </TransitionLink>
-        <TransitionLink to='/game'>
+        <TransitionLink to='/about'>
           <TextButton defaultActive={location.pathname == '/about'}>
             <svg viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" width="24" height="24" fill="#ffffff">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">

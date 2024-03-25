@@ -87,8 +87,8 @@ export default function FeaturedSection()
                         <div className="absolute top-0 left-0 h-3/4 w-full bg-gradient-to-b from-background to-transparent -z-10"/>
                         <img src="/Synthai.png" className="absolute top-0 left-0 -z-20 w-full h-full object-cover"/>
                         <div className='bg-white/50 bg-opacity-20 backdrop-blur-lg rounded-lg drop-shadow-lg flex flex-col items-center justify-center p-10'>
-                            <h1 className='text-5xl lg:text-8xl font-bold tracking-tighter text-center accent-gradient background-clip-text'>SynthAi</h1>
-                            <h1 className='text-4xl lg:text-6xl font-bold opacity-70 tracking-tighter py-2 text-center'>SaaS AI Platform.</h1>
+                            <h1 className='text-4xl lg:text-6xl font-bold tracking-tighter text-center accent-gradient background-clip-text'>SynthAi</h1>
+                            <h1 className='text-3xl lg:text-3xl font-bold opacity-70 tracking-tighter py-2 text-center'>SaaS AI Platform.</h1>
                             <a href="https://synth-aii.vercel.app/" target='_blank'>
                                 <Button color='primary' className='mt-8 w-48'>Checkout SynthAi</Button>
                             </a>
@@ -96,7 +96,7 @@ export default function FeaturedSection()
                     </div>
                     <div className="w-[100vw] h-full relative flex flex-col md:flex-row sm:justify-center items-center p-4 lg:px-32 xl:px-64">
                         {/* <ModelCanvas className=''/> */}
-                        <div className='h-40 md:w-full md:h-96' ref={ref}>
+                        <div className='h-40 md:w-0 md:h-96' ref={ref}>
                             {/* <Canvas camera={{fov:35,position:[0,0,6]}}> */}
                                 {/* <Bee CanvasRef={ref}/> */}
                             {/* </Canvas> */}
@@ -105,9 +105,9 @@ export default function FeaturedSection()
                         <div className='bg-white bg-opacity-20 backdrop-blur-lg rounded-lg drop-shadow-lg p-10'>
                             <div className="w-full flex flex-col justify-center items-center">
                                 {/* accent-gradient background-clip-text */}
-                                <h1 className='animate left font-black text-6xl md:text-9xl leading-tight accent-gradient background-clip-text'>Xcrypto.</h1>
-                                <h1 className='animate left delay-1 font-extrabold text-2xl md:text-5xl leading-tight mt-4'>For All <span className='mt-4'>Crypto needs.</span></h1>
-                                <p className='animate left delay-2 font-light opacity-70 text-sm md:text-base mt-2'>A crypto app made using react which shows all exchanges and coins using coingecko API</p>
+                                <h1 className='animate left font-black text-4xl md:text-6xl leading-tight accent-gradient background-clip-text'>Xcrypto.</h1>
+                                <h1 className='animate left delay-1 font-extrabold text-3xl md:text-3xl leading-tight mt-4'>For All your <span className='mt-4'>Crypto needs.</span></h1>
+                                {/* <p className='animate left delay-2 font-light opacity-70 text-sm md:text-base mt-2'>A crypto app made using react which shows all exchanges and coins using coingecko API</p> */}
                                 <div className="flex gap-4 mt-4">
                                     <a href='https://utxcryptoapp.netlify.app/' target='_blank' className='bg-primary w-64 rounded-xl px-4 py-2.5 md:py-4 md:px-6 hover:scale-105 transition-transform active:scale-95 text-xs md:text-base grid place-content-center'>Visit Xcrypto</a>
                                 </div>
@@ -118,8 +118,8 @@ export default function FeaturedSection()
                         <div className="absolute top-0 left-0 h-3/4 w-full bg-gradient-to-b from-background to-transparent -z-10"/>
                         <img src="/todo.png" className="absolute top-0 left-0 -z-20 w-full h-full object-cover"/>
                         <div className='bg-white/50 bg-opacity-20 backdrop-blur-lg rounded-lg drop-shadow-lg flex flex-col items-center justify-center p-12'>
-                            <h1 className='text-5xl lg:text-8xl font-bold tracking-tighter text-center accent-gradient background-clip-text'>nextToDo</h1>
-                            <h1 className='text-2xl lg:text-5xl font-bold opacity-70 tracking-tighter'>Get Stuff Done.</h1>
+                            <h1 className='text-4xl lg:text-6xl font-bold tracking-tighter text-center accent-gradient background-clip-text'>nextToDo</h1>
+                            <h1 className='text-3xl lg:text-3xl font-bold opacity-70 tracking-tighter'>Get Stuff Done.</h1>
                             <a target='_blank' href="https://nexttodooo.vercel.app/">
                                 <Button color='primary' className='mt-8 w-48'>Visit nextTodo</Button>
                             </a>
