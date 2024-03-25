@@ -5,7 +5,7 @@ export default function AnimatedText(props:{text:string,delay?:number,refresh?:b
 {
     const textRef = useRef<HTMLSpanElement>(null);
 
-    let isVisible = useIntersectionObserver(textRef);
+    const isVisible = useIntersectionObserver(textRef);
 
     useEffect(()=>{
         mount()
@@ -32,7 +32,7 @@ export default function AnimatedText(props:{text:string,delay?:number,refresh?:b
         let extra = 0;
         if(props.delay)extra = props.delay;
         //split text
-        let html = props.text.split("").map((val,index)=>{return `<span class='anim-char-in' style='animation-delay: ${index * 25 + extra}ms;'>${val}</span>`;}).join("");
+        const html = props.text.split("").map((val,index)=>{return `<span class='anim-char-in' style='animation-delay: ${index * 25 + extra}ms;'>${val}</span>`;}).join("");
         textRef.current.innerHTML = html;
     }
 

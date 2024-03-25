@@ -1,10 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-// import BUZZUPBG from '../../../public/todo.png'
 import Button from '../common/Button'
-// import { TransitionLink } from '../../contexts/PageLoaderContext';
-import { Canvas } from '@react-three/fiber';
 import Xcrypto from '../../assets/xcrypto.mp4';
-import Bee from '../models/Bee';
 
 export default function FeaturedSection()
 {
@@ -18,6 +14,7 @@ export default function FeaturedSection()
     },[])
 
     const isTransitioning = useRef(false);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const intervalId = useRef<any>(0);
 
     function resetTimer()

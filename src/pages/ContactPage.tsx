@@ -70,7 +70,6 @@ function ContactPage()
                 </div>
                 <div className={`grow-[2] flex flex-wrap-reverse items-stretch hover:grow-[2.5] transition-all duration-500 ${gapClass}`}>
                     <div className={`grow-[1] w-16 flex flex-col ${gapClass}`}>
-                    {/* bg-gradient-to-b from-green-400 to-green-500  */}
                         <a target='_blank' href='https://www.codechef.com/users/utkarsgupta17' ref={refs[4]} className={`${cardClass} bg-white grow`}>
                             <div>
                                 <img src='/CodeChef.png' height='20px' width='200px'></img>

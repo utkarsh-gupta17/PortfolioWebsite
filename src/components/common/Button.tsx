@@ -8,7 +8,7 @@ function Button(props:{
 })
 {
 
-    let color:{[key: string]: string;} = {
+    const color:{[key: string]: string;} = {
         "primary":"bg-primary",
         "secondary":"bg-secondary",
         "accent":"bg-accent",
