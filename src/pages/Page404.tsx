@@ -7,6 +7,7 @@ function Page404() {
     <>
         <Navbar />
         <section className="container h-screen mx-auto flex flex-col justify-center items-center">
+        <img src="https://cdn.rawgit.com/ahmedhosna95/upload/1731955f/sad404.svg" alt="404"/>
             <h1 className="text-9xl font-bold">404</h1>
             <p className="text-2xl">Page Not Found</p>
             <div>

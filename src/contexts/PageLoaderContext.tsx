@@ -2,7 +2,6 @@ import { useLenis } from "@studio-freight/react-lenis";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { LinkProps, To, useLocation, useNavigate } from "react-router-dom";
 import wat from "../assets/wat.png?url";
-import axios from "../axios";
 
 type PageLoaderContextType = {
     navigateTo: (to: To,force?:boolean) => Promise<void>
@@ -46,16 +45,16 @@ export function PageLoaderProvider(props: { children: React.ReactNode }) {
 
     useEffect(() => {
         if (hasToRefresh) {
+            // eslint-disable-next-line no-self-assign
             window.location.href = window.location.href;
         }
     }, [reactLocation.pathname])
 
     const displayText: { [key: string]: string } = {
         "/": "HOME",
-        "/3D": "3D",
+        "/about": "ABOUT",
         "/projects": "PROJECTS",
         "/contact": "CONTACT",
-        "/game": "ABYSSAL DESCENT",
     }
     async function navigateTo(to: To,force:boolean=false) {
         if(!force)
@@ -78,54 +77,6 @@ export function PageLoaderProvider(props: { children: React.ReactNode }) {
             }, 2100);
         }
     }, [isAnimating])
-
-    const visitUpdate = async() => {
-        if(localStorage.getItem("HasVisited") == null)
-        {
-            try
-            {
-                const response = await axios.get("/stats/incrementUniqueVisits");
-                if(response.status == 200)
-                {
-                    localStorage.setItem("HasVisited", "true");
-                }
-            }
-            catch(e)
-            {
-                console.error(e);
-            }
-        }
-        let visitedTime = localStorage.getItem("LastVisited");
-        if(visitedTime == null)
-        {
-            MakeCall();
-            visitedTime = Date.now().toString();
-            localStorage.setItem("LastVisited", visitedTime);
-            return;
-        }
-        const timeDiff = Date.now() - parseInt(visitedTime);
-        if(timeDiff > 1000 * 60 * 60 * 24)
-        {
-            MakeCall();
-        }
-        async function MakeCall()
-        {
-            try
-            {
-                const response = await axios.get("/stats/incrementDailyVisits");
-                if(response.status == 200)
-                {
-                    localStorage.setItem("LastVisited", Date.now().toString());
-                }
-            }
-            catch(e)
-            {
-                console.error(e);
-            }
-        }
-    }
-
-    useEffect(()=>{visitUpdate()}, []);
 
     const value: PageLoaderContextType = {
         navigateTo,
