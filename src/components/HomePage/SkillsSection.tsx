@@ -12,63 +12,41 @@ export function SkillsSection()
                         {
                             title:"Frontend Development",
                             fields:{
-                                "React":.5,
-                                "React Three Fiber | ThreeJS":.7,                      
-                                "CSS":.75,                    
-                                "TailwindCSS":.9,
+                                "ReactJS":1,
+                                "NextJS":1,   
+                                "HTML":1,                    
+                                "CSS":1,                    
+                                "TailwindCSS":1,
                             }
                         },
                         {
                             title:"Backend Development",
                             fields:{
-                                "NODEJS":.4,
-                                "EXPRESSJS":.5,                      
-                                "MONGODB":.6,                    
-                                "SQL":.65,
+                                "NodeJS":1,
+                                "ExpressJS":1,                      
+                                "MongoDB":1,                    
+                                "SQL":1,
                             }
                         },
                         {
                             title:"Languages",
                             fields:{
-                                "C++":.7,
-                                "Python":.65,
-                                "Javascript":.6,
-                                "Typescript":.56,
+                                "C/C++":1,
+                                "Python":1,
+                                "Javascript":1,
+                                "Typescript":1,
                             }
                         },
                         {
-                            title:"Game Development",
+                            title:"Developer Tools & Design",
                             fields:{
-                                "C# with Unity":.9,
-                                "2D / 3D Asset Creation":.7,
-                                "Game Design":.85,
-                                "VR / AR Development":.7,      
+                                "Figma":1,
+                                "Canva":1,
+                                "Github":1,
+                                "Postman":1,
+                                "Graphic Design":1,                    
                             }
                         },
-                        {
-                            title:"Design",
-                            fields:{
-                                "UI Design":.8,
-                                "UX Design":.7,
-                                "Graphic Design":.8,                    
-                            }
-                        },
-                        {
-                            title:"3D Design",
-                            fields:{
-                                "3D Modelling":.5,
-                                "Lighting & Composition":.7,
-                                "Product Animation":.9,
-                            }
-                        },
-                        {
-                            title:"Other Skills",
-                            fields:{
-                                "Motion Graphics":.6,
-                                "Video Editing":.5,
-                                "VFX":.4,
-                            }
-                        }
                     ].map((category,index)=>{
                         return(
                             <SkillCard key={index} title={category.title} fields={category.fields}/>
@@ -109,7 +87,7 @@ function SkillFill(props:{fields:{[key:string]:number|undefined},field:string,ca
     return(
         <div ref={fillRef} className={`fill-ref-class h-full absolute left-0 top-0 bg-primary rounded-lg origin-left duration-1000 ${isIntersecting?"scale-x-100":"scale-x-0"} flex items-center justify-end px-4`} style={{...props.style,width:props.fields[props.field]! * 100 + "%"}}>
             <div className="absolute w-full h-full left-0 top-0 bg-gradient-to-tr from-primary to-accent duration-300 opacity-0 group-hover:opacity-100 rounded-lg"></div>
-            <div className="relative z-10 hidden md:block">{(props.fields[props.field]!*100).toFixed(0)}%</div>
+            {/* <div className="relative z-10 hidden md:block">{(props.fields[props.field]!*100).toFixed(0)}%</div> */}
         </div>
     )
 }
