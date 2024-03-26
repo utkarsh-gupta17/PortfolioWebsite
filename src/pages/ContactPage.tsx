@@ -83,7 +83,7 @@ function ContactPage()
                     </div>
                     <a target='_blank' href='https://leetcode.com/utkarsgupta17/' ref={refs[1]} className={`${cardClass} bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500 w-128 grow-[2]`}>
                         <div>
-                            <img src='/leetcode1.png' height='50px' width='400px'></img>
+                            <img src='/LeetCode.png' height='50px' width='400px'></img>
                         </div>
                     </a>
                 </div>
