@@ -21,7 +21,7 @@ function LandingHero () {
                   "Web Development.",
                   "Graphic Designing.",
                   "Machine Learning.",
-                  "Philosphy.",
+                  "Philosophy.",
                 ],
                 autoStart: true,
                 loop: true,
