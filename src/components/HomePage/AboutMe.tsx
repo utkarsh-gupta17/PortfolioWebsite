@@ -147,21 +147,9 @@ export default function AboutMe(props:{sectionRef:React.RefObject<HTMLDivElement
             </ScrollIndicator>
             <div className='overflow-x-clip 2xl:-mb-[24rem] xl:-mb-[15rem] lg:-mb-[4rem] hidden lg:block'>
                 <div ref={parentRef} className='w-max'>
-                    {/* <div ref ={refs[0]} className="overflow-y-clip">
-                        <h3 ref ={insideRefs[0]} className='text-xl tracking-[50px] font-extrabold'>{age}</h3>
-                    </div> */}
                     <div ref ={refs[1]} className="overflow-y-clip">
                         <h3 ref ={insideRefs[1]} className='mt-4 text-9xl font-extrabold'>{about_me}</h3>
                     </div>
-                    {/* <div ref ={refs[2]} className="overflow-y-clip">
-                        <h3 ref ={insideRefs[2]} className='-mt-4 text-9xl font-extrabold opacity-75'>{alias}</h3>
-                    </div> */}
-                    {/* <div ref ={refs[3]} className="overflow-y-clip">
-                        <h3 ref ={insideRefs[3]} className='-mt-4 text-9xl font-extrabold opacity-50'>{bday}</h3>
-                    </div> */}
-                    {/* <div ref ={refs[4]} className="overflow-y-clip">
-                        <h3 ref ={insideRefs[4]} className='mt-4 text-xl tracking-[50px] font-extrabold'>{age}</h3>
-                    </div> */}
                 </div>
             </div>
             <div className="md:container md:mx-auto flex flex-row items-end gap-8 px-8">
@@ -178,10 +166,9 @@ export default function AboutMe(props:{sectionRef:React.RefObject<HTMLDivElement
                         }
                     </div>
                     <p ref={MeRef[1]} className='text-justify mt-6 text-xs font-light md:text-base mb-4'>
-                        Currently pursuing B.Tech in Computer Science & Engineering from National Institute of Technology, Delhi I am looking for Internship as well as Full time roles as a Software Development Engineer.
+                        Currently pursuing B.Tech in Computer Science & Engineering from National Institute of Technology, Delhi. I am looking for Internship as well as full time roles as a Software Development Engineer.
                     </p>
                 </div>
-                {/*  MY Image here */}
                 <div className="w-full overflow-y-clip hidden lg:block relative">
                     <div className="group" ref={imageRef}>
                         <img className={`absolute top-0 left-0 z-10 w-full h-full duration-700 ${isIntersecting?"opacity-0":""}`} src={ME} alt="" />

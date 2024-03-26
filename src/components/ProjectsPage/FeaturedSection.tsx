@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Button from '../common/Button'
 import Xcrypto from '../../assets/xcrypto.mp4';
+import ScrollIndicator from '../common/ScrollIndicator';
 
 export default function FeaturedSection()
 {
@@ -76,7 +77,8 @@ export default function FeaturedSection()
                         //     return <div onClick={()=>{setPhase(index);resetTimer()}} className={`cursor-pointer w-3 h-3 rounded-full transition-colors duration-700 ${(index==phaseIndex)?"bg-[#000000]":"bg-[#ff3030]/50"}`} key={value}></div>
                         // }
                         return(
-                            <div onClick={()=>{setPhase(index);resetTimer()}} className={`cursor-pointer w-3 h-3 rounded-full transition-colors duration-700 ${(index==phaseIndex)?"bg-primary":"bg-primary/50"}`} key={value}></div>
+                            <div onClick={()=>{setPhase(index);resetTimer()}} className={`cursor-pointer w-3 h-3 rounded-full transition-colors duration-700 ${(index==phaseIndex)?"bg-primary":"bg-primary/50"}`} key={value}>
+                            </div>                                
                         )
                     })
                 }
@@ -95,11 +97,7 @@ export default function FeaturedSection()
                         </div>
                     </div>
                     <div className="w-[100vw] h-full relative flex flex-col md:flex-row sm:justify-center items-center p-4 lg:px-32 xl:px-64">
-                        {/* <ModelCanvas className=''/> */}
                         <div className='h-40 md:w-0 md:h-96' ref={ref}>
-                            {/* <Canvas camera={{fov:35,position:[0,0,6]}}> */}
-                                {/* <Bee CanvasRef={ref}/> */}
-                            {/* </Canvas> */}
                         </div> 
                         <video src={Xcrypto} className="absolute top-0 left-0 -z-20 w-full h-full object-cover" autoPlay muted loop/>
                         <div className='bg-white bg-opacity-20 backdrop-blur-lg rounded-lg drop-shadow-lg p-10'>
@@ -126,6 +124,9 @@ export default function FeaturedSection()
                         </div>
                     </div>
                 </div>
+                <ScrollIndicator>
+                    <h1 className="text-xs text-blue-700">Explore More</h1>
+                </ScrollIndicator>
             </div>
         </section>
     </>

@@ -6,11 +6,11 @@ function WorkExperience()
     const experience = [
         {
             title: "MACHINE LEARNING",
-            hoverTitle: "Malviya National Institute of Technology Jaipur",
+            hoverTitle: "Malviya National Institute of Technology, Jaipur",
             type: "INTERN",
             subTitle: <>
                 <h1 className="font-bold">JUN 2023 - JUL 2023</h1>
-                <div className="mt-4">Collaborated with a team of PhD students, & Deployed a Multi-Class Waste Segmentation system to achieve 95% accuracy in real-world waste sorting trials leveraging cutting-edge YOLOv8 technology.<br className="mt-4"/>This project is currently under training with
+                <div className="mt-4">Collaborated with a team of PhD students & Deployed a Multi-Class Waste Segmentation System to achieve 95% accuracy in real-world waste sorting trials leveraging cutting-edge YOLOv8 technology.<br className="mt-4"/>This project is currently under training with
 potential for significant impact on waste management efficiency.</div>
             </>,
             link: "https://drive.google.com/file/d/1-lm8y-iTrDHh8OMG_cu4M3UAttfKLcuQ/view"
