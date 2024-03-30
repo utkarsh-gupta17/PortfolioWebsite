@@ -7,7 +7,7 @@ export default function FeaturedSection()
 {
     const [phaseIndex,setPhaseIndex] = useState(0);
     const ref = useRef<HTMLDivElement>(null)
-    const phases = ['SynthAi','nextToDo',"Xcrypt"];
+    const phases = ['SynthAi','GoChat','nextToDo',"Xcrypt"];
 
     useEffect(()=>{
         deltaPhase(0);
@@ -84,7 +84,7 @@ export default function FeaturedSection()
                 }
             </div>
             <div className="absolute top-0 left-0 h-full w-full overflow-clip z-10">
-                <div style={{translate:`-${(phaseIndex)}00vw 0`}} className="w-[300vw] h-full flex transition-all duration-500">
+                <div style={{translate:`-${(phaseIndex)}00vw 0`}} className="w-[500vw] h-full flex transition-all duration-500">
                     <div className="w-[100vw] h-full relative flex flex-col justify-center items-center">
                         <div className="absolute top-0 left-0 h-3/4 w-full bg-gradient-to-b from-background to-transparent -z-10"/>
                         <img src="/Synthai.png" className="absolute top-0 left-0 -z-20 w-full h-full object-cover"/>
@@ -93,6 +93,17 @@ export default function FeaturedSection()
                             <h1 className='text-3xl lg:text-3xl font-bold opacity-70 tracking-tighter py-2 text-center'>SaaS AI Platform.</h1>
                             <a href="https://synth-aii.vercel.app/" target='_blank'>
                                 <Button color='primary' className='mt-8 w-48'>Checkout SynthAi</Button>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="w-[100vw] h-full relative flex flex-col justify-center items-center">
+                        <div className="absolute top-0 left-0 h-3/4 w-full bg-gradient-to-b from-background to-transparent -z-10"/>
+                        <img src="/gochat.png" className="absolute top-0 left-0 -z-20 w-full h-full object-cover"/>
+                        <div className='bg-white/50 bg-opacity-20 backdrop-blur-lg rounded-lg drop-shadow-lg flex flex-col items-center justify-center p-10'>
+                            <h1 className='text-4xl lg:text-6xl font-bold tracking-tighter text-center accent-gradient background-clip-text'>GoChat</h1>
+                            <h1 className='text-3xl lg:text-3xl font-bold opacity-70 tracking-tighter py-2 text-center'></h1>
+                            <a href="https://github.com/utkarsh-gupta17/GoChat-backend" target='_blank'>
+                                <Button color='primary' className='mt-8 w-60'>Checkout GoChat's Repository</Button>
                             </a>
                         </div>
                     </div>

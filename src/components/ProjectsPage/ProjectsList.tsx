@@ -13,6 +13,12 @@ export default function ProjectsList() {
                     link: "https://synth-aii.vercel.app/"
                 },
                 {
+                    title: "GoChat.",
+                    hoverTitle: "A Chat Platform",
+                    subTitle: "Chat platform using Go as backend",
+                    link: "https://github.com/utkarsh-gupta17/GoChat-backend"
+                },
+                {
                     title: "PORTFOLIO SITE",
                     hoverTitle: "MAYBE RECURSION?",
                     subTitle: "A website to showcase all my skills and work.",
