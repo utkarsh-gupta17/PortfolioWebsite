@@ -53,7 +53,7 @@ function HomePage()
                 
                 <div ref={heroTextRef[0]} className='bg-red flex gap-5 mt-4'>
 
-                    <a href='https://drive.google.com/drive/u/1/folders/1NbVYxVtpDthB_DWbHj9HfxA6o9hoJgXW' target='_blank'>
+                    <a href='https://drive.google.com/file/d/1l2QvOM5uZRBPo6GSOMxyEJWCNbxs3-EI/view?usp=sharing' target='_blank'>
                         <Button color='primary' className='md:w-48'>RESUME</Button>
                     </a>
                     <TransitionLink to='/projects'>
